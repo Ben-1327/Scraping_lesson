@@ -13,7 +13,7 @@ search_bar = driver.find_element_by_name("q")
 search_bar.send_keys("python")
 search_bar.submit()
 
-i = 0
+i = 1
 while True:
     i = i + 1
     sleep(1)
@@ -23,5 +23,5 @@ while True:
         print(elem_a.get_attribute('href'))
     next_link = driver.find_element_by_id('pnnext')
     driver.get(next_link.get_attribute('href'))
-    if i > 4:
+    if i >= 6:
         break
