@@ -1,7 +1,10 @@
 from selenium import webdriver
 from time import sleep
+from selenium.webdriver.chrome.options import Options
 
-driver = webdriver.Chrome('/usr/local/Caskroom/chromedriver/86.0.4240.22/chromedriver')
+options = Options()
+options.add_argument('--headless')
+driver = webdriver.Chrome('/usr/local/Caskroom/chromedriver/86.0.4240.22/chromedriver',options=options)
 
 driver.get('https://www.google.co.jp')
 
