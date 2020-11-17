@@ -19,7 +19,7 @@ csv_date = datetime.datetime.today().strftime("%Y%m%d")
 csv_file_name = 'google_python_' + csv_date + '.csv'
 f = open(csv_file_name, 'w', encoding='cp932', errors='ignore')
 writer = csv.writer(f, lineterminator='\n')
-csv_header = ["検索順位","URL","サマリー"]
+csv_header = ["検索順位","サマリー","URL"]
 writer.writerow(csv_header)
 
 
